@@ -7,7 +7,7 @@ import tensorflow as tf
 
 app = FastAPI() # Initialisation de l'app.
 
-MODEL = tf.keras.models.load_model('/Users/margothuet/Documents/Dev/ML Projects/Ampelos/1') # Modèle utilisé pour prédire les images
+MODEL = tf.keras.models.load_model('../Ampelos/1') # Modèle utilisé pour prédire les images
 CLASS_NAMES = ["Black Rot", "ESCA", "Healthy", "Leaf Blight"] # Labels de chaque catégorie à prédire
 
 @app.get("/hello/") # Url
