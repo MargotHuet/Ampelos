@@ -1,6 +1,3 @@
 * {
-  background-image: url("/Users/margothuet/Documents/Dev/ML Projects/Ampelos/frontend/my-app/src/images/background.png");
-  background-size: cover;
-  opacity: 0.6;
+    overflow-x: hidden;
 }
-

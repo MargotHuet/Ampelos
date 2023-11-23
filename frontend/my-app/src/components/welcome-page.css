@@ -1,0 +1,31 @@
+.banniere {
+  background-image: url("/Users/margothuet/Documents/Dev/ML Projects/Ampelos/frontend/my-app/src/images/background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.6;
+  height : 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+  
+.welcome-container {
+  border: 1px solid black;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+  max-width: 300px;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  height: 300px;
+  padding: 35px;
+  border: 1px solid rgba(255, 255, 255, .25);
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.45);
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(15px);
+}
+

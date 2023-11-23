@@ -4,10 +4,26 @@ import numpy as np # Numerical Python pour convertir des matrices en images.
 from io import BytesIO # Permet de stocker des données binzires en mémoire.
 from PIL import Image # PIL = Python Image Library ou Pillow, sert à ouvrir, manipuler, créer et enregistrer des images.
 import tensorflow as tf 
+from fastapi.middleware.cors import CORSMiddleware # Permet de configurer les requêtes CORS.
 
 app = FastAPI() # Initialisation de l'app.
 
-MODEL = tf.keras.models.load_model('../Ampelos/1') # Modèle utilisé pour prédire les images
+# CORS
+origin = [
+    "http://localhost",
+    "http://localhost:3000"
+]
+
+app.add_middleware( 
+    CORSMiddleware,
+    allow_origins=origin,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+# Fin CORS
+
+MODEL = tf.keras.models.load_model('/Users/margothuet/Documents/Dev/ML Projects/Ampelos/1') # Modèle utilisé pour prédire les images
 CLASS_NAMES = ["Black Rot", "ESCA", "Healthy", "Leaf Blight"] # Labels de chaque catégorie à prédire
 
 @app.get("/hello/") # Url
